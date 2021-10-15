@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box; /* adding any padding or border to an element will not affect the width */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex; /* this will center everything */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* viewport height */
+  overflow: hidden; /* scrollbars won't show by default */
+  margin: 0;
+  background-position: center center; /* center on both x and y axes */
+  background-size: cover;
+  transition: 0.4s;
+}
+
+/* add an overlay */
+body::before {
+  content: ''; /* required when using ::before */
+  position: absolute;
+  top: 0; /* start in upper left-hand corner */
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.7);
+  z-index: -1; /* prevents overlay from covering arrow buttons */
+}
+
+.slider-container {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); /* horizontal vertical offsets (1st and 2nd), blur, color */
+  height: 70vh;
+  width: 70vw;
+  position: relative; /* slides will be positioned absolute within container later */
+  overflow: hidden;
+}
+
+.slide {
+  opacity: 0;
+  height: 100vh;
+  width: 100vw;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: -15vh;
+  left: -15vw;
+  transition: 0.4s ease;
+  z-index: 1; /* slide will always be on top */
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.arrow {
+  position: fixed;
+  background-color: transparent;
+  color: #fff;
+  padding: 20px;
+  font-size: 30px;
+  border: 2px solid orange;
+  top: 50%;
+  transform: translateY(-50%); /* this will move the arrow button into the exact middle of the container */
+  cursor: pointer;
+}
+
+.arrow:focus {
+  outline: 0;
+}
+
+.left-arrow {
+  left: calc(15vw - 65px);
+}
+
+.right-arrow {
+  right: calc(15vw - 65px);
+}
