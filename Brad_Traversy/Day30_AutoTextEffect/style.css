@@ -16,15 +16,28 @@ body {
   margin: 0;
 }
 
-div {
-  position: absolute;
-  bottom: 20px;
+.topInput {
+  position:absolute;
+  top: 100px;
   background: rgba(0,0,0,0.1);
   padding: 10px 20px;
   font-size: 18px;
 }
 
-input {
+#inputText {
+  width: 200px;
+  margin: 0 20px 0 20px;
+}
+
+.bottomInput {
+  position: absolute;
+  bottom: 100px;
+  background: rgba(0,0,0,0.1);
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.inputs {
   width: 50px;
   padding: 5px;
   font-size: 18px;
@@ -33,6 +46,7 @@ input {
   text-align: center;
 }
 
-input:focus {
+.inputs:focus {
   outline: none;
 }
+
