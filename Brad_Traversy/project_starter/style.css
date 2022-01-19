@@ -8,8 +8,8 @@ body {
   font-family: 'Roboto', sans-serif;
   display: flex; /* this will center everything */
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* controls where flex items sit on cross axis */
+  justify-content: center; /* controls where flex items sit on main axis */
   height: 100vh; /* viewport height */
   overflow: hidden; /* scrollbars won't show by default */
   margin: 0;
