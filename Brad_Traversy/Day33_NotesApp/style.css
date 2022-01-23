@@ -13,7 +13,7 @@ body {
   padding-top: 3rem;
 }
 
-.add {
+.add, .remove {
   position: fixed;
   top: 1rem; /* this is a multiplier of the root element which is 16px */
   right: 1rem;
@@ -23,6 +23,10 @@ body {
   padding: 0.5rem 1rem;
   color: #fff;
   cursor: pointer;
+}
+
+#add {
+  margin-right: 175px;
 }
 
 .note {
